@@ -17,6 +17,9 @@ importers:
       '@telegram-apps/telegram-ui':
         specifier: ^2.1.5
         version: 2.1.5(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@tma.js/sdk':
+        specifier: ^2.7.0
+        version: 2.7.0
       '@tonconnect/ui-react':
         specifier: ^2.0.5
         version: 2.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -459,6 +462,10 @@ packages:
 
   '@telegram-apps/types@1.2.0':
     resolution: {integrity: sha512-HhvnSCsqlJpes5ZGsZP/qbDNq8eLLnjgZKaF5NRsDqAKUPvaIIFT1HdyDII/8EioUgoI4FHsP8MylK2Gzm2efg==}
+
+  '@tma.js/sdk@2.7.0':
+    resolution: {integrity: sha512-LRuJdoEbAqKmSYccvXx5emSnye2je8oIbBVPtV+BmcNoa/dCZ0gFVkaeuyBqzroGtfGDyGO/WebU54ie5MKmCQ==}
+    deprecated: This package is not supported anymore. Use @telegram-apps/sdk instead.
 
   '@tonconnect/isomorphic-eventsource@0.0.2':
     resolution: {integrity: sha512-B4UoIjPi0QkvIzZH5fV3BQLWrqSYABdrzZQSI9sJA9aA+iC0ohOzFwVVGXanlxeDAy1bcvPbb29f6sVUk0UnnQ==}
@@ -2371,6 +2378,8 @@ snapshots:
       '@telegram-apps/types': 1.2.0
 
   '@telegram-apps/types@1.2.0': {}
+
+  '@tma.js/sdk@2.7.0': {}
 
   '@tonconnect/isomorphic-eventsource@0.0.2':
     dependencies:

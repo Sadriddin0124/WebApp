@@ -6,11 +6,33 @@ import {
   parseInitData,
   retrieveLaunchParams,
 } from '@telegram-apps/sdk-react';
+import { useEffect } from 'react';
 
 /**
  * Mocks Telegram environment in development mode.
  */
 export function useTelegramMock(): void {
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'development') return;
+
+    if (!window.Telegram) {
+      window.Telegram = {
+        WebApp: {
+          initData: '',
+          initDataUnsafe: {
+            user: {
+              id: 123456,
+              username: 'dev_user',
+              languageCode: 'en',
+            },
+          },
+          platform: 'web',
+          ready: () => {},
+          expand: () => {},
+        },
+      };
+    }
+  }, []);
   useClientOnce(() => {
     if (!sessionStorage.getItem('env-mocked') && isTMA('simple')) {
       return;
