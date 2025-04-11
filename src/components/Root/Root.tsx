@@ -19,6 +19,7 @@ import { init } from '@/core/init';
 
 import './styles.css';
 import { useTelegram } from '@/hooks/useTelegram';
+import Home from '@/app/page';
 
 function RootInner({ children }: PropsWithChildren) {
   const isDev = process.env.NODE_ENV === 'development';
@@ -70,7 +71,7 @@ export function Root(props: PropsWithChildren) {
   const didMount = useDidMount();
 
   return didMount ? (
-    <ErrorBoundary fallback={ErrorPage}>
+    <ErrorBoundary fallback={Home}>
       <RootInner {...props} />
     </ErrorBoundary>
   ) : (
